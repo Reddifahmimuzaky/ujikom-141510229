@@ -22,5 +22,6 @@ Route::resource('/golongan', 'golonganController');
 Route::resource('/jabatan', 'jabatanController');
 Route::resource('/kategori', 'KategoriController');
 Route::resource('/pegawai', 'PegawaiController');
-Route::resource('/lembur', 'lemburController');	
+Route::resource('/lembur', 'lemburController');
+Route::resource('/tunjangan', 'TunjanganController');	
 Auth::routes();

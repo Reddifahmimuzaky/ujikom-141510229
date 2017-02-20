@@ -3,29 +3,37 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3>CRUD Laravel 5.3</h3>
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <form action="{{route('lembur.store')}}" method="post">
+                    <form action="{{route('tunjangan.store')}}" method="post">
                     {{csrf_field()}}
                         
                         <div class="form-group">
-                               <select name="kode_lembur_id" class="form-control">
-                                   @foreach($kategori as $crud)
-                                   <option value="{{$crud->id}}">{{$crud->kode_lembur}}</option>
+                            <input type="text" name="kode_tunjangan" class="form-control" placeholder=" Kode Tunjangan">
+                        </div>
+                        <div class="form-group">
+                               <select name="jabatan_id" class="form-control">
+                                   @foreach($jabatan as $crud)
+                                   <option value="{{$crud->id}}">{{$crud->nama_jabatan}}</option>
                                    @endforeach
                                </select>
                         
                                </div>
                                <div class="form-group">
-                               <select name="pegawai_id" class="form-control">
-                                   @foreach($pegawai as $cruds)
-                                   <option value="{{$cruds->id}}">{{$cruds->user->name}}</option>
+                               <select name="golongan_id" class="form-control">
+                                   @foreach($golongan as $cruds)
+                                   <option value="{{$cruds->id}}">{{$cruds->nama_golongan}}</option>
                                    @endforeach
                                </select>
                                </div>
                         <div class="form-group">
-                            <input type="text" name="jumlah_jam" class="form-control" placeholder=" Besaran Uang">
+                            <input type="text" name="status" class="form-control" placeholder=" status">
+                        <div class="form-group">
+                            <input type="text" name="jumlah_anak" class="form-control" placeholder=" Jumlah Anak">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="besaran_uang" class="form-control" placeholder=" Besaran Uang">
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="Simpan">

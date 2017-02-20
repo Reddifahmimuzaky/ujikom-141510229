@@ -13,6 +13,6 @@ class golongan extends Model
         return $this->hasMany('App\pegawai','golongan_id');
     }
     public function kategori() {
-        return $this->hasMany('KategoriLembur','kategori_id');
+        return $this->hasMany('App\KategoriLembur','kategori_id');
     }
 }
