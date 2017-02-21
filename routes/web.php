@@ -23,5 +23,6 @@ Route::resource('/jabatan', 'jabatanController');
 Route::resource('/kategori', 'KategoriController');
 Route::resource('/pegawai', 'PegawaiController');
 Route::resource('/lembur', 'lemburController');
-Route::resource('/tunjangan', 'TunjanganController');	
+Route::resource('/tunjangan', 'TunjanganController');
+Route::resource('/tunpeg', 'TunjanganPegawaiController');	
 Auth::routes();

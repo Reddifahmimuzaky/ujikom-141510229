@@ -42,12 +42,18 @@ class TunjanganController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         //
-        $tunjangan=Request::all();
-        tunjangan::create($tunjangan);
-        return redirect('tunjangan');
+        $tunjangan = new tunjangan();
+        $tunjangan->kode_tunjangan = $request->kode_tunjangan;
+        $tunjangan->jabatan_id = $request->jabatan_id;
+        $tunjangan->golongan_id = $request->golongan_id;
+        $tunjangan->status = $request->status;
+        $tunjangan->jumlah_anak = $request->jumlah_anak;
+        $tunjangan->besaran_uang = $request->besaran_uang;
+        $tunjangan->save();
+        return redirect()->route('tunjangan.index')->with('alert-success', 'Data Berhasil Disimpan.');
     }
 
     /**
@@ -69,7 +75,10 @@ class TunjanganController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tunjangan = tunjangan::findOrFail($id);
+        $golongan = golongan::all();
+        $jabatan = jabatan::all();
+        return view('tunjangan.edit', compact('tunjangan','golongan','jabatan'));
     }
 
     /**
@@ -89,7 +98,7 @@ class TunjanganController extends Controller
         $tunjangan->jumlah_anak = $request->jumlah_anak;
         $tunjangan->besaran_uang = $request->besaran_uang;
         $cruds->save();
-        return redirect()->route('tunjangan.index')->with('alert-success', 'Data Berhasil Disimpan.');
+        return redirect()->route('tunjangan.index')->with('alert-success', 'Data Berhasil Diubah.');
     }
 
     /**

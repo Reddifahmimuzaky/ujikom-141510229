@@ -2,7 +2,7 @@
 @section('content')
 <div class="js">
 <div class="banner">
-		    	<h1>Lembur Pegawai</h1>
+		    	<h1>Tunjangan Pegawai</h1>
 		    </div>
 		    <div id="preloader"></div>
 <div class="container">
@@ -16,28 +16,25 @@
 				            {{ Session::get('alert-success') }}
 				        </div>
 					@endif
-					<a href="{{route('lembur.create')}}" class="btn btn-info pull-right">Tambah Data</a><br><br>
+					<a href="{{route('tunpeg.create')}}" class="btn btn-info pull-right">Tambah Data</a><br><br>
 					
 					<table class="table table-striped">
 						<tr>
 							<th>No</th>
-							<th> Kategori Lembur</th>
+							<th>Tunjangan</th>
 							<th>pegawai</th>
-							<th>jam lembur</th>
 							<th>Pilihan</th>
 						</tr>
 						<?php $no=1; ?>
-						@foreach($lembur as $lemburs)
+						@foreach($tunpeg as $tunpegs)
 						<tr>
 							<td>{{$no++}}</td>
-							<td>{{$lemburs->kategori->kode_lembur}}</td>
-							<td>{{$lemburs->pegawai->user->name}}</td>	
-							<td>{{$lemburs->jumlah_jam}}</td>
+							<td>{{$tunpegs->tunjangan->kode_tunjangan_id}}</td>
+							<td>{{$tunpegs->pegawai->user->name}}</td>
 							<td>
-								<form method="POST" action="{{ route('lembur.destroy', $lemburs->id) }}" accept-charset="UTF-8">
+								<form method="POST" action="{{ route('tunpeg.destroy', $tunpegs->id) }}" accept-charset="UTF-8">
 		                            <input name="_method" type="hidden" value="DELETE">
 		                            <input name="_token" type="hidden" value="{{ csrf_token() }}">
-		                            <a href="{{route('lembur.edit', $lemburs->id)}}" class="btn btn-primary">Edit</a>
 		                        	<input type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin akan menghapus data ?');" value="Delete">
 		                        </form>
 							</td>

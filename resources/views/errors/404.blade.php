@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
     <div class="four">
-        <img src="assets/images/404.png" alt="" />
+        <img src="assets/404.png" alt="" />
         <h1>Ooops... Halaman Tidak Ditemukan</h1>
         <a href="/home" class="hvr-shutter-in-horizontal">Kembali Ke Home</a>
     </div>
