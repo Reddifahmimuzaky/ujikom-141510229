@@ -26,9 +26,7 @@ class StoreRequest extends FormRequest
         return [
             'kode_jabatan' => 'required',
             'nama_jabatan' => 'required',
-            'besaran_uang' => 'required',
-            'kode_golongan' => 'required',
-            'nama_golongan' => 'required'
+            'besaran_uang' => 'required'
         ];
     }
 
@@ -37,9 +35,7 @@ class StoreRequest extends FormRequest
         return [
             'kode_jabatan.required' => 'Kode Jabatan Tidak Boleh Kosong.',
             'nama_jabatan.required' => 'Nama Jabatan Tidak Boleh Kosong.',
-            'besaran_uang.required' => 'Besaran Uang Tidak Boleh Kosong.',
-            'kode_golongan.required' => 'Kode Golongan Tidak Boleh Kosong.',
-            'nama_golongan.required' => 'Nama Golongan Tidak Boleh Kosong.'
+            'besaran_uang.required' => 'Besaran Uang Tidak Boleh Kosong.'
         ];
     }
 }

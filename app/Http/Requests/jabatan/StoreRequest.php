@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\TunjanganPegawai;
+namespace App\Http\Requests\jabatan;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,15 +24,17 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'tunjangan_id' => 'Required',
-            'pegawai_id' => 'Required',
-        ];
+            'kode_jabatan' => 'required',
+            'nama_jabatan' => 'required',
+            'besaran_uang' => 'required'   
+              ];
     }
     public function messages()
     {
         return [
-            'tunjangan_id.required' => 'Kode Kategori Tidak Boleh Kosong.',
-            'pegawai_id.required' => 'pegawai Tidak Boleh Kosong.',
+            'kode_jabatan.required' => 'Kode Jabatan Tidak Boleh Kosong.',
+            'nama_jabatan.required' => 'Nama Jabatan Tidak Boleh Kosong.',
+            'besaran_uang.required' => 'Besaran Uang Tidak Boleh Kosong.'
             
         ];
     }

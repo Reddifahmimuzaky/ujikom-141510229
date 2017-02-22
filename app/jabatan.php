@@ -8,12 +8,6 @@ class jabatan extends Model
 {
     //
     protected $table = 'jabatans';
-    protected $fillable = ['id','kode_jabatan','nama_jabatan','besaran_uang','created_at','updated_at'];
+    protected $fillable = ['id','kode_jabatan','nama_jabatan','besaran_uang'];
     public $timestamps = true;
-    public function pegawai() {
-        return $this->hasMany('app\jabatan','jabatan_id');
-    }
-    public function kategori() {
-        return $this->belongsTo('KategoriLembur','kategori_id');
-    }
 }

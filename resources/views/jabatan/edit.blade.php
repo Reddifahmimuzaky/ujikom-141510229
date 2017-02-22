@@ -6,8 +6,6 @@
 			<h3>CRUD Laravel 5.3</h3>
 			<div class="panel panel-default">
 				<div class="panel-body">
-
-{!! $errors->first('kode_jabatan', '<p class="help-block">:message</p>') !!}
 					<form action="{{route('jabatan.update', $jabatan->id)}}" method="post">
 					<input name="_method" type="hidden" value="PATCH">
 					{{csrf_field()}}

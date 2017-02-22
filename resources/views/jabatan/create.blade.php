@@ -8,16 +8,19 @@
 				<div class="panel-body">
 					<form action="{{route('jabatan.store')}}" method="post">
 					{{csrf_field()}}
-						<div class="form-group{{ $errors->has('kode_jabatan') ? ' has-error' : '' }}">
-							<input type="text" name="kode_jabatan" class="form-control" placeholder="kode Jabatan">
+						<div class="form-group">
+							<div class="form-group{{ $errors->has('kode_jabatan') ? ' has-error' : '' }}">
+							<input type="text" name="kode_jabatan" class="form-control" placeholder="kode_jabatan">
 							{!! $errors->first('kode_jabatan', '<p class="help-block">:message</p>') !!}
 						</div>
-						<div class="form-group{{ $errors->has('nama_jabatan') ? ' has-error' : '' }}">
-							<input type="text" name="nama_jabatan" class="form-control" placeholder=" nama Jabatan">
+						<div class="form-group">
+							<div class="form-group{{ $errors->has('nama_jabatan') ? ' has-error' : '' }}">
+							<input type="text" name="nama_jabatan" class="form-control" placeholder=" nama_jabatan">
 							{!! $errors->first('nama_jabatan', '<p class="help-block">:message</p>') !!}
 						</div>
-						<div class="form-group{{ $errors->has('besaran_uang') ? ' has-error' : '' }}">
-							<input type="text" name="besaran_uang" class="form-control" placeholder=" Besaran Uang">
+						<div class="form-group">
+							<div class="form-group{{ $errors->has('besaran_uang') ? ' has-error' : '' }}">
+							<input type="text" name="besaran_uang" class="form-control" placeholder=" besaran_uang">
 							{!! $errors->first('besaran_uang', '<p class="help-block">:message</p>') !!}
 						</div>
 						<div class="form-group">

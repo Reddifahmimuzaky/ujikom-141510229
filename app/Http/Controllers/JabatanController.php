@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 use Request;
 use App\jabatan;
 use App\Http\Requests;
-use App\Http\Requests\crud\StoreRequest;
-use App\Http\Requests\crud\UpdateRequest;
+use App\Http\Requests\jabatan\StoreRequest;
+use App\Http\Requests\jabatan\UpdateRequest;
 
 class JabatanController extends Controller
 {
     //
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
      public function index()
     {
         $jabatan = jabatan::all();
@@ -35,11 +39,11 @@ class JabatanController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $cruds = new jabatan();
-        $cruds->kode_jabatan = $request->kode_jabatan;
-        $cruds->nama_jabatan = $request->nama_jabatan;
-        $cruds->besaran_uang = $request->besaran_uang;
-        $cruds->save();
+        $jabatan = new jabatan();
+        $jabatan->kode_jabatan = $request->kode_jabatan;
+        $jabatan->nama_jabatan = $request->nama_jabatan;
+        $jabatan->besaran_uang = $request->besaran_uang;
+        $jabatan->save();
         return redirect()->route('jabatan.index')->with('alert-success', 'Data Berhasil Disimpan.');
     }
 
@@ -75,11 +79,11 @@ class JabatanController extends Controller
      */
     public function update(UpdateRequest $request, $id)
     {
-        $cruds = jabatan::find($id);
-        $cruds->kode_jabatan = $request->kode_jabatan;
-        $cruds->nama_jabatan = $request->nama_jabatan;
-        $cruds->besaran_uang = $request->besaran_uang;
-        $cruds->save();
+        $jabatan = jabatan::find($id);
+        $jabatan->kode_jabatan = $request->kode_jabatan;
+        $jabatan->nama_jabatan = $request->nama_jabatan;
+        $jabatan->besaran_uang = $request->besaran_uang;
+        $jabatan->save();
         return redirect()->route('jabatan.index')->with('alert-success', 'Data Berhasil Diubah.');
     }
 

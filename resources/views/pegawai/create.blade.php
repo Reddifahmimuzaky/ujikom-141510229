@@ -93,8 +93,16 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="permission" class="form-control" placeholder="permission">
+                            <div class="form-group">
+                            <label class="col-md-4 control-label">Hak Akses</label>
+                            <div class="col-md-6">
+                                <select class="form-control" name="permission">
+                                    <option>Pilih Hak Akses</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="hrd">HRD</option>
+                                    <option value="keuangan">Keuangan</option>
+                                </select>
+                            </div>
                         </div>
 
 

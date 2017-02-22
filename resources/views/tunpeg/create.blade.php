@@ -9,13 +9,13 @@
                     {{csrf_field()}}
                         
                         <div class="form-group">
-                               <select name="kode_tunjangan_id" class="form-control">
-                                   @foreach($tunjangan as $tunjangans)
-                                   <option value="{{$tunjangans->id}}">{{$tunjangans->tunpeg->kode_tunjangan_id}}</option>
+                               <select name="tunjangan_id" class="form-control">
+                                   @foreach($tunjangan as $cruds)
+                                   <option value="{{$cruds->id}}">{{$cruds->kode_tunjangan}}</option>
                                    @endforeach
                                </select>
-                        
                                </div>
+                               
                                <div class="form-group">
                                <select name="pegawai_id" class="form-control">
                                    @foreach($pegawai as $cruds)

@@ -29,7 +29,7 @@
 						@foreach($tunpeg as $tunpegs)
 						<tr>
 							<td>{{$no++}}</td>
-							<td>{{$tunpegs->tunjangan->kode_tunjangan_id}}</td>
+							<td>{{$tunpegs->tunpeg->kode_tunjangan}}</td>
 							<td>{{$tunpegs->pegawai->user->name}}</td>
 							<td>
 								<form method="POST" action="{{ route('tunpeg.destroy', $tunpegs->id) }}" accept-charset="UTF-8">

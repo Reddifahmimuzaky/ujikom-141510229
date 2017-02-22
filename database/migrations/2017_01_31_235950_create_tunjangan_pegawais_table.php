@@ -15,8 +15,8 @@ class CreateTunjanganPegawaisTable extends Migration
     {
         Schema::create('tunjangan_pegawais', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('kode_tunjangan_id')->unsigned();
-            $table->foreign('kode_tunjangan_id')->references('id')->on('tunjangans')->onDelete('CASCADE');
+            $table->integer('tunjangan_id')->unsigned();
+            $table->foreign('tunjangan_id')->references('id')->on('tunjangans')->onDelete('CASCADE');
             $table->integer('pegawai_id')->unsigned();
             $table->foreign('pegawai_id')->references('id')->on('pegawais')->onDelete('CASCADE');
             $table->timestamps();
