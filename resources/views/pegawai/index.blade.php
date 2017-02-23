@@ -17,6 +17,14 @@
 				            {{ Session::get('alert-success') }}
 				        </div>
 					@endif
+					<form action="{{ url('/result')}}" action="GET">
+  <div class="form-group">
+   <label for="cari">data yang dicari</label>
+   <input type="text" class="form-control" id="cari" name="cari" placeholder="cari">
+  </div>
+  <input class="btn btn-primary" type="submit" value="Cari">
+ </form>
+
 					<a href="{{route('pegawai.create')}}" class="btn btn-info pull-right">Tambah Data</a><br><br>
 					<table class="table table-striped">
 						<tr>
@@ -24,6 +32,7 @@
 							<th>nip </th>
 							<th>user_id</th>
 							<th>jabatan_id </th>
+							<th>status</th>
 							<th>golongan_id</th>
 							<th>photo</th>
 							<th>Pilihan</th>
@@ -35,8 +44,9 @@
 							<td>{{$crud->nip}}</td>
 							<td>{{$crud->user->name}}</td>
 							<td>{{$crud->jabatan->nama_jabatan}}</td>
+							<td>{{$crud->user->permission}}</td>
 							<td>{{$crud->golongan->nama_golongan}}</td>
-
+							
 							<td><div class="gallery-img" >
  	 		<a href="assets/{{$crud->photo}}" class="b-link-stripe b-animate-go  swipebox"  title="Image Title" >
 				 <img class="img-responsive "  src="assets/{{$crud->photo}}" alt="" / width="90px">   

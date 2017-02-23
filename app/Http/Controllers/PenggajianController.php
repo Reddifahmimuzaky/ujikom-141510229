@@ -3,29 +3,27 @@
 namespace App\Http\Controllers;
 
 use Request;
-use App\pegawai;
-use App\KategoriLembur;
-use App\LemburPegawai;
-use App\Http\Requests\lembur\StoreRequest;
 
-class lemburController extends Controller
+use App\Http\Requests\penggajian\StoreRequest;
+use App\TunjanganPegawai;
+use App\penggajian;
+
+class PenggajianController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-      public function __construct()
+    public function __construct()
     {
         $this->middleware('keuangan');
     }
     public function index()
     {
-        //
-        $kategori = KategoriLembur::all();
-        $pegawai = pegawai::all();
-        $lembur = LemburPegawai::all();
-        return view('lembur.index', compact('kategori','pegawai','lembur'));
+        $tunpeg = TunjanganPegawai::all();
+        $penggajian = penggajian::all();
+        return view('penggajian.index', compact('tunpeg','penggajian'));
     }
 
     /**
@@ -35,11 +33,7 @@ class lemburController extends Controller
      */
     public function create()
     {
-        //
-        $kategori = KategoriLembur::all();
-        $pegawai = pegawai::all();
-        $lembur = LemburPegawai::all();
-        return view('lembur.create',compact('pegawai','kategori','lembur'));
+        
     }
 
     /**
@@ -50,14 +44,7 @@ class lemburController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        //
-        $lembur = new LemburPegawai();
-        $lembur->kode_lembur_id = $request->kode_lembur_id;
-        $lembur->pegawai_id = $request->pegawai_id;
-        $lembur->jumlah_jam = $request->jumlah_jam;
-        $lembur->save();
-        return redirect()->route('lembur.index')->with('alert-success', 'Data Berhasil Disimpan.');
-    }
+        
 
     /**
      * Display the specified resource.
@@ -65,9 +52,12 @@ class lemburController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+}
     public function show($id)
     {
-        //
+       $tunpeg = TunjanganPegawai::all();
+        $penggajian = penggajian::all();
+        return view('penggajian.show', compact('tunpeg','penggajian'));
     }
 
     /**
@@ -78,7 +68,7 @@ class lemburController extends Controller
      */
     public function edit($id)
     {
-       
+        //
     }
 
     /**
@@ -90,7 +80,7 @@ class lemburController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        //
     }
 
     /**
@@ -102,8 +92,5 @@ class lemburController extends Controller
     public function destroy($id)
     {
         //
-        $lembur = LemburPegawai::findOrFail($id);
-        $lembur->delete();
-        return redirect()->route('lembur.index')->with('alert-success', 'Data Berhasil Dihapus.');
     }
 }

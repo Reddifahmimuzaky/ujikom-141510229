@@ -10,19 +10,42 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// use App\pegawai;
+// use App\jabatan;
+// use App\golongan;
+// use App\user;
 
-route::get('/', function(){
-	return redirect()->to('/home');
-});
 
-Auth::routes();
+
+Route::get('/result', 'pegawaiController@search');
 
 Route::get('/home', 'HomeController@index');
 Route::resource('/golongan', 'golonganController');
 Route::resource('/jabatan', 'jabatanController');
 Route::resource('/kategori', 'KategoriController');
-Route::resource('/pegawai', 'PegawaiController');
+
 Route::resource('/lembur', 'lemburController');
 Route::resource('/tunjangan', 'TunjanganController');
-Route::resource('/tunpeg', 'TunjanganPegawaiController');	
+Route::resource('/tunpeg', 'TunjanganPegawaiController');
+Route::resource('/pegawai', 'pegawaiController');
+Route::resource('/penggajian', 'penggajianController');
 Auth::routes();
+// Route::group(['middleware' => 'web'],function(){
+ 	
+// });
+// Route::group(['middleware' => ['web','auth']], function()
+// 	{
+// 		Route::get('/home', 'HomeController@index');
+// 		Route::get('/',function(){
+// 			if (Auth::user()->permission == 1) {
+// 				 $pegawai = pegawai::all();
+// 				 $golongan = golongan::all();
+//         		$user = User::all();
+// 				return view('pegawai/index',compact('pegawai','golongan','user'));
+// 			} else  {
+// 					return view('tunpeg/index');
+// 			}
+
+// 		});
+// 	});
+

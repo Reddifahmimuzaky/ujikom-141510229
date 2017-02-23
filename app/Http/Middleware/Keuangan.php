@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class IsAdmin
+class Keuangan
 {
     /**
      * Handle an incoming request.
@@ -15,11 +15,12 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->check() && $request->user()->permission == "admin") {
+        if (auth()->check() && $request->user()->permission == "keuangan") {
             return $next($request);
         }
-        
+        elseif (auth()->check() && $request->user()->permission == "admin") {
+            return $next($request);
+        }
         return redirect()->guest('/akses');
-     
     }
 }

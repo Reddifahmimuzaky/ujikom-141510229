@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use App\pegawai;
 use App\jabatan;
 use App\golongan;
@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Input;
+use redirect;
 
 class PegawaiController extends Controller
 {
@@ -19,12 +20,12 @@ class PegawaiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct()
-    {
-        $this->middleware('auth');
-    }
     use RegistersUsers;
 
+     public function __construct()
+    {
+        $this->middleware('hrd');
+    }
     public function index()
     {
         //
@@ -138,4 +139,11 @@ class PegawaiController extends Controller
         $pegawai->delete();
         return redirect()->route('pegawai.index')->with('alert-success', 'Data Berhasil Dihapus.');
     }
+    public function search(Request $request){
+      $input = Request::get('cari');
+  $name = \App\User::where('name', 'LIKE', '%'.$input.'%')->get();
+  $pegawai = \App\pegawai::where('nip', 'LIKE', '%'.$input.'%')->get();
+  $jabatan = \App\jabatan::where('nama_jabatan', 'LIKE', '%'.$input.'%')->get();
+  return view('result.pegawai', compact('name','pegawai','jabatan'));
+     }
 }

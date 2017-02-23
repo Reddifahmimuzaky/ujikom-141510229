@@ -11,9 +11,10 @@ use App\Http\Requests\jabatan\UpdateRequest;
 class JabatanController extends Controller
 {
     //
+     
      public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('keuangan');
     }
      public function index()
     {

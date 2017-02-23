@@ -11,6 +11,11 @@ use App\Http\Requests\tunjangan\UpdateRequest;
 
 class TunjanganController extends Controller
 {
+
+     public function __construct()
+    {
+        $this->middleware('keuangan');
+    }
     public function index()
     {
         //
@@ -26,10 +31,7 @@ class TunjanganController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct()
-    {
-        $this->middleware('auth');
-    }
+     
     public function create()
     {
         //

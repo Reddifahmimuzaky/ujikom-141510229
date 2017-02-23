@@ -117,68 +117,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </li>
                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Jabatan</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Keuangan</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="/jabatan" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/jabatan/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Jabatan</a></li>
+                            <li><a href="/jabatan" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Jabatan</a></li>
+                            <li><a href="/golongan" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Golongan </a></li>
+                            <li><a href="/kategori" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Kategori Lembur</a></li>
+                            <li><a href="/lembur" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Lembur Pegawai</a></li>
+                            <li><a href="/tunjangan" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Tunjangan</a></li>
+                            <li><a href="/tunpeg" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Tunjangan Pegawai</a></li>
+                            <li><a href="/penggajian" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Peggajian</a></li>
+
 						</ul>
                     </li>
+                    
                     <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Golongan</span><span class="fa arrow"></span></a>
+                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">HRD</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="/golongan" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
+                            <li><a href="/pegawai" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Pegawai</a></li
                             
-                            <li><a href="/golongan/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Golongan</a></li>
 					   </ul>
-                    </li>
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Kategori Lembur</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="/kategori" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/kategori/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Kategori</a></li>
-						</ul>
-                    </li>
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Pegawai</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="/pegawai" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/pegawai/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Pegawai</a></li>
-					   </ul>
-                    </li>
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Lembur Pegawai</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="/lembur" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/lembur/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Lembur</a></li>
-                            </ul>
-                    </li>
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Tunjangan</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="/tunjangan" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/tunjangan/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Tunjangan</a></li>
-                            </ul>
-                    </li>
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Tunjangan Pegawai</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="/tunpeg" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/tunpeg/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Tunjangan</a></li>
-                            </ul>
-                    </li>
-                    <li>
-                        <a href="#" class=" hvr-bounce-to-right"><i class="fa fa-indent nav_icon"></i> <span class="nav-label">Penggajian</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li><a href="/penggajian" class=" hvr-bounce-to-right"> <i class="fa fa-area-chart nav_icon"></i>Index</a></li>
-                            
-                            <li><a href="/penggajian/create" class=" hvr-bounce-to-right"><i class="fa fa-map-marker nav_icon"></i>Tambah Penggajian</a></li>
-                            </ul>
                     </li>
                 </ul>
             </div>
