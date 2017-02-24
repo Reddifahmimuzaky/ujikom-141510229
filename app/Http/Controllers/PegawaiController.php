@@ -92,7 +92,7 @@ class PegawaiController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**

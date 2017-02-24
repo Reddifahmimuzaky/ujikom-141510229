@@ -18,12 +18,13 @@
 
 
 Route::get('/result', 'pegawaiController@search');
-
 Route::get('/home', 'HomeController@index');
 Route::resource('/golongan', 'golonganController');
 Route::resource('/jabatan', 'jabatanController');
 Route::resource('/kategori', 'KategoriController');
-
+Route::get('/', function(){
+	return redirect()->to('/login');
+});
 Route::resource('/lembur', 'lemburController');
 Route::resource('/tunjangan', 'TunjanganController');
 Route::resource('/tunpeg', 'TunjanganPegawaiController');

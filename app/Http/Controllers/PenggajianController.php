@@ -33,7 +33,9 @@ class PenggajianController extends Controller
      */
     public function create()
     {
-        
+        $tunpeg = TunjanganPegawai::all();
+        $penggajian = penggajian::all();
+     return view('penggajian.create', compact('tunpeg','penggajian'));   
     }
 
     /**
@@ -44,7 +46,17 @@ class PenggajianController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        
+        $penggajian = new penggajian();
+        $penggajian->tunjangan_pegawai_id = $request->tunjangan_pegawai_id;
+        $penggajian->jumlah_jam_lembur = $request->jumlah_jam_lembur;
+        $penggajian->jumlah_uang_lembur = $request->jumlah_uang_lembur;
+        $penggajian->tanggal_pengambilan = $request->tanggal_pengambilan;
+        $penggajian->gaji_pokok = $request->gaji_pokok;
+        $penggajian->total_gaji = $request->total_gaji;
+        $penggajian->status_pengambilan = $request->status_pengambilan;
+        $penggajian->petugas_penerima = $request->petugas_penerima;
+        $penggajian->save();
+        return redirect()->route('penggajian.index')->with('alert-success', 'Data Berhasil Disimpan.');
 
     /**
      * Display the specified resource.

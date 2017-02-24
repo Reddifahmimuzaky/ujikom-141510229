@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+use Illuminate\Http\Request;
 use App\jabatan;
 use App\Http\Requests;
 use App\Http\Requests\jabatan\StoreRequest;
@@ -11,7 +11,7 @@ use App\Http\Requests\jabatan\UpdateRequest;
 class JabatanController extends Controller
 {
     //
-     
+
      public function __construct()
     {
         $this->middleware('keuangan');
