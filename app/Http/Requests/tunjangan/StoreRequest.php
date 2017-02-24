@@ -35,7 +35,7 @@ class StoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'kode_tunjangan.required' => 'Kode Kategori Tidak Boleh Kosong.',
+            'kode_tunjangan.required' => 'Kode tunjangan Tidak Boleh Kosong.',
             'jabatan_id.required' => 'Jabatan Tidak Boleh Kosong.',
             'golongan_id.required' => 'Golongan Tidak Boleh Kosong.',
             'status.required' => 'Status Tidak Boleh Kosong.',
